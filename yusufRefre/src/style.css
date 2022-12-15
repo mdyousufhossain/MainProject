@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Staatliches&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .MainTitle{
+        @apply text-4xl xs:text-8xl text-center font-title font-bold p-2 my-2;
+      };
+ 
+    .paragraph{
+        @apply text-justify text-ellipsis break-all  tracking-wide leading-7 xs:leading-9 p-3 text-xl xs:text-2xl font-semibold overflow-hidden antialiased;
+    };
+    .consText{
+        @apply font-title uppercase font-bold text-2xl text-4xl  tracking-wide leading-7 p-3  overflow-hidden antialiased;
+    };
+    .section_L{
+        @apply min-w-full min-h-screen 
+    }
+  
+  }
+
