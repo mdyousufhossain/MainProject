@@ -1,9 +1,18 @@
 import React from 'react';
+import { Nav } from '../../constants/info';
 
-const NavBar = () => {
-  console.log('heye there')(
-    <div>NavBar</div>,
+function NavBar() {
+  return (
+    <div className="container">
+      <nav>
+        <ul>
+          {
+          Nav.map((navbar) => <li key={navbar.id}>{navbar.title}</li>)
+           }
+        </ul>
+      </nav>
+    </div>
   );
-};
+}
 
 export default NavBar;

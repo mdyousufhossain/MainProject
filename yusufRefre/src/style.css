@@ -18,7 +18,11 @@
     };
     .section_L{
         @apply min-w-full min-h-screen 
+    };
+    .container{
+        @apply w-4/5 m-auto 
     }
-  
+
+
   }
 
