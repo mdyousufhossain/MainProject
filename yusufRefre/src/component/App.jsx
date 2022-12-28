@@ -1,11 +1,11 @@
 import React from 'react';
 import NavBar from './NavBar/NavBar';
-import Data from '../data/Data';
+import AppData from '../data/Data';
 
 function App() {
   return (
     <main>
-      <Data />
+      <AppData />
       <NavBar />
     </main>
   );

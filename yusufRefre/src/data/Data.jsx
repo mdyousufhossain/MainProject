@@ -1,44 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect , useState } from 'react';
 import supabase from '../client/client';
 
-function Data() {
-  const [fetchError, setFetchError] = useState(null);
-  const [smooth, setSmooth] = useState(null);
+function AppData() {
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const { data, error } = await supabase.from('YRDB')
-        .select();
-
-      if (error) {
-        setFetchError('Error');
-        setSmooth(null);
-        console.log(error);
-      }
-      if (data) {
-        setSmooth(data.map((n) => console.log(n.title)));
-        setFetchError(null);
-      }
-    };
-    fetchData();
+    // Use the Supabase client to make a request to fetch data from a table in your database
+    supabase.from('YRDB').select().then((response) => {
+      // Set the fetched data in the component's state
+      setData(response.body);
+    });
   }, []);
 
   return (
     <div>
-      {fetchError && (
-      <p>
-        {fetchError}
-      </p>
-      ) }
-
-      <div>
-        {console.log(smooth.title)}
-        {smooth && smooth.map((smoot) => (
-          <p>{smoot.title}</p>
-        ))}
-      </div>
+      {data ? (
+        // Render the data in your component
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>{item.title}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>Loading data...</p>
+      )}
     </div>
   );
 }
 
-export default Data;
+export default AppData;
