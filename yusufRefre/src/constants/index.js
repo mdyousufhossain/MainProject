@@ -52,7 +52,7 @@ export const Product_info : [
     },
     {
       "id": 3,
-      "Title":"3/8 Elbo ",
+      "Title":"3/8 Elbo",
       "Description":[{
                 "Model" :[ "1/2","5/8","1/4"],
                 "Details":["None"]

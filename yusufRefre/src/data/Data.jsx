@@ -1,29 +1,37 @@
-import React, { useEffect , useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import supabase from '../client/client';
 
 function AppData() {
-  const [data, setData] = useState(null);
+  const [title, setTitle] = useState(null);
+  // const [fetchError, setFetchError] = useState(null);
 
   useEffect(() => {
-    // Use the Supabase client to make a request to fetch data from a table in your database
-    supabase.from('YRDB').select().then((response) => {
-      // Set the fetched data in the component's state
-      setData(response.body);
-    });
+    async function fetchData() {
+      const { data, error } = await supabase.from('yrProductDB').select('* ');
+
+      if (error) console.log('error', error);
+      else setTitle(data);
+    }
+    fetchData();
   }, []);
 
   return (
     <div>
-      {data ? (
-        // Render the data in your component
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>{item.title}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>Loading data...</p>
-      )}
+      <p>hey there is
+        {console.log(title)}
+      </p>
+      <ul>
+
+        {title && title.map((t) => (
+          <li key={t.id}>{t.title}
+            <p> {t.brand}</p>
+            <p> {t.category}</p>
+            {t.description && t.description.map((p) => (
+              <p key={p.id}> {p.Details}</p>
+            )) }
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
