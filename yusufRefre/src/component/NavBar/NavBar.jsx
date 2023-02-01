@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="container">
-      <nav>
-        <h1>hello</h1>
-      </nav>
-    </div>
+    <nav>
+      <Link>Home</Link>
+      <Link>About</Link>
+      <Link>Contact</Link>
+      <button onClick={() => setIsOpen(!isOpen)}>Toggle Menu</button>
+      {isOpen && (
+        <ul>
+          <li><Link>Home</Link></li>
+          <li><Link>About</Link></li>
+          <li><Link>Contact</Link></li>
+        </ul>
+      )}
+    </nav>
   );
 }
 

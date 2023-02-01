@@ -1,11 +1,13 @@
 import React from 'react';
 import NavBar from './NavBar/NavBar';
-import AppData from '../data/Data';
+// import AppData from '../data/Data';
+import Hero from './Hero/Hero';
 
 function App() {
   return (
     <main>
-      <AppData />
+      <Hero />
+
       <NavBar />
     </main>
   );

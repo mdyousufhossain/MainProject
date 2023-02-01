@@ -7,7 +7,7 @@ function AppData() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data, error } = await supabase.from('yrProductDB').select('* ');
+      const { data, error } = await supabase.from('yrProductDB').select('*');
 
       if (error) console.log('error', error);
       else setTitle(data);
@@ -24,11 +24,7 @@ function AppData() {
 
         {title && title.map((t) => (
           <li key={t.id}>{t.title}
-            <p> {t.brand}</p>
-            <p> {t.category}</p>
-            {t.description && t.description.map((p) => (
-              <p key={p.id}> {p.Details}</p>
-            )) }
+            <p> {t.category === 'Refrigeration Tool' ? 'yes' : 'no its not'}</p>
           </li>
         ))}
       </ul>
