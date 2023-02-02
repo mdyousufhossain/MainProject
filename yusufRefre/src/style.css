@@ -7,7 +7,7 @@
 
 @layer components{
     .MainTitle{
-        @apply text-4xl xs:text-8xl text-center font-title font-bold p-2 ;
+        @apply text-4xl xs:text-8xl marker:text-left  font-title font-bold p-2 ;
       };
  
     .paragraph{
