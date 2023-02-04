@@ -7,7 +7,7 @@
 
 @layer components{
     .MainTitle{
-        @apply text-4xl xs:text-8xl marker:text-left  font-title font-bold p-2 ;
+        @apply text-6xl text-center xs:text-8xl md:text-left  font-title font-bold p-2 ;
       };
  
     .paragraph{
@@ -21,6 +21,12 @@
     };
     .container{
         @apply w-4/5 m-auto 
+    }
+    .btn {
+        @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center m-2 
+    }
+    .navbarMentu {
+        @apply px-4 py-2 mr-6 text-gray-900 font-medium hover:text-black
     }
 
 

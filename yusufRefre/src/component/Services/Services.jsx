@@ -1,8 +1,10 @@
 import React from 'react';
 
 const Services = () => {
-  console.log('heye there')(
-    <div>Services</div>,
+  (
+    <div>
+       {/* there will be 3-4 product with svg icon or icon i guess with map function of course  */}
+    </div>,
   );
 };
 
