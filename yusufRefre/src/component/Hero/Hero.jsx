@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
-import { heroSection } from '../../constants/info';
-import rg from '../../assets/repireguy.png';
+import { heroSection, promotion } from '../../constants/info';
+import rat from '../../assets/repireguy.png';
 
 function Hero() {
   return (
@@ -38,9 +38,8 @@ function Hero() {
                   experience
                 </span>
               </h1>
-              <div className="md:py-16">
-                <img src={rg} alt="" className="h-[256px]" />
-              </div>
+              <div className="py-16"> <img src={rat} className="h-[256px]" alt="" /></div>
+
             </div>
             {/* details */}
             <p className="consText text-Title_light">{heroSection.details}</p>
@@ -54,6 +53,18 @@ function Hero() {
             <h1>left </h1>
             {/* // this is left
             // there will be gradient according to picture */}
+          </div>
+        </div>
+        <div className="w-full">
+          <div className="flex justify-around md:px-16">
+
+            { promotion && promotion.map((p) => (
+              <h3 className="consText text-Title_light" key={p.id}>
+                <span> <img className="h-[77px] mx-auto" src={p.icon} /> </span>
+                {p.titile}
+              </h3>
+            ))}
+
           </div>
         </div>
       </div>
