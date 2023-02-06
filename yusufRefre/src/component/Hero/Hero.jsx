@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
+import { heroSection } from '../../constants/info';
 
 function Hero() {
   return (
@@ -13,16 +14,16 @@ function Hero() {
       <div className="md:container m-4  md:mx-auto py-8 md:py-16
        "
       >
-        <div className="md:flex md:justify-between hidden md:block border-b-2 border-primary2 py-8 mb-8">
+        {/* <div className="md:flex md:justify-between hidden md:block border-b-2 border-primary2 py-8 mb-8">
           <h3 className="text-gray-900 font-medium font-title text-xl"> Yousuf refrigeration</h3>
           <NavBar />
-        </div>
+        </div> */}
         <div className="md:flex">
           <div className="w-full md:w-9/12">
-            <h1 className="MainTitle bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-violet-600">35 years of experience</h1>
-            <p className="paragraph">for dacads Yousuf refrigeration have been trusted choices for reliability and safety in Air conditioning , heating parts and serives</p>
-            <button className="btn">Contract Us</button>
-            <button className="btn">learn More </button>
+            <h1 className="MainTitle bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-violet-600">{heroSection.titile}</h1>
+            <p className="paragraph">{heroSection.details}</p>
+            <button className="btn" type="button">Contract Us</button>
+            <button className="btn" type="button">learn More</button>
 
             {/* button and details why you guys trust us  */}
           </div>
