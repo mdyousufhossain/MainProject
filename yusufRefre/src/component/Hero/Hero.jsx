@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import { heroSection } from '../../constants/info';
+import rg from '../../assets/repireguy.png';
 
 function Hero() {
   return (
@@ -15,9 +16,10 @@ function Hero() {
         <NavBar />
       </div>
       {/* starting the pc section of navbar and hero design */}
-      <div className="md:container my-4 md:mx-auto py-8 md:py-10
+      <div className="md:container my-4 md:mx-auto pb-8 md:pb-10
        "
       >
+
         {/* navbar menu for pc  */}
         <div className="md:flex  md:justify-between hidden md:block border-b-2 border-primary2 py-6 mb-6">
 
@@ -26,16 +28,25 @@ function Hero() {
           <NavBar />
         </div>
         {/* hero section starting here  */}
-        <div className="md:flex md:justify-between">
+        <div className="md:flex md:justify-between py-4 md:py-16">
           {/* title and details text area and button  */}
           <div className="w-full md:w-3/5">
             {/* titile */}
-            <h1 className="MainTitle bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-violet-600">{heroSection.titile}</h1>
+            <div className="flex">
+              <h1 className="MainTitle bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-violet-700">35 years of <br />
+                <span className="MainTitle mx-0 text-Title_light">
+                  experience
+                </span>
+              </h1>
+              <div className="md:py-16">
+                <img src={rg} alt="" className="h-[256px]" />
+              </div>
+            </div>
             {/* details */}
-            <p className="paragraph ">{heroSection.details}</p>
+            <p className="consText text-Title_light">{heroSection.details}</p>
 
             <button className="btn" type="button">Contract Us</button>
-            <button className="btn" type="button">learn More </button>
+            <button className="btn md:mx-4" type="button">learn More </button>
 
             {/* image cersalll from glider and motion js */}
           </div>
