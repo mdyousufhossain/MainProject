@@ -7,11 +7,11 @@
 
 @layer components{
     .MainTitle{
-        @apply text-6xl text-center xs:text-8xl md:text-left  font-title font-bold p-2 ;
+        @apply text-8xl mx-2 md:text-left  font-title font-bold py-2 ;
       };
  
     .paragraph{
-        @apply text-justify text-ellipsis break-all  tracking-wide leading-7 xs:leading-9 p-3 text-lg xs:text-2xl overflow-hidden antialiased;
+        @apply text-justify text-ellipsis break-all leading-7 xs:leading-8 py-2 m-2  text-2xl antialiased;
     };
     .consText{
         @apply font-title uppercase font-bold text-2xl text-4xl  tracking-wide leading-7 p-3  overflow-hidden antialiased;
@@ -23,7 +23,7 @@
         @apply w-4/5 m-auto 
     }
     .btn {
-        @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center m-2 
+        @apply bg-gray-300  hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 m-2  rounded inline-flex items-center 
     }
     .navbarMentu {
         @apply px-4 py-2 mr-6 text-gray-900 font-medium hover:text-black
