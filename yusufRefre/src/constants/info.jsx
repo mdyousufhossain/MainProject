@@ -1,7 +1,4 @@
-import sat from '../assets/satisfaction.svg';
-import time from '../assets/time.svg';
-import top from '../assets/top.svg';
-import ThemeIcon from './darkmodUI';
+import { Top, Time, Satisfaction } from './Avatar';
 
 export const menu = [
   {
@@ -26,12 +23,6 @@ export const menu = [
     id: 4,
     titile: 'Contract',
     icon: null,
-    link: 'contract',
-  },
-  {
-    id: 5,
-    titile: null,
-    icon: <ThemeIcon />,
     link: 'contract',
   },
 ];
@@ -63,18 +54,18 @@ export const promotion = [
   {
     id: 1,
     titile: '100% Satisfaction',
-    icon: sat,
+    icon: <Satisfaction />,
   },
 
   {
     id: 2,
     titile: 'Long Tearm Services',
-    icon: time,
+    icon: <Time />,
   },
   {
     id: 3,
     titile: 'Top quality',
-    icon: top,
+    icon: <Top />,
   },
 ];
 

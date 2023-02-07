@@ -9,12 +9,16 @@ function NavBar() {
   return (
     <nav className="z-10">
       <div className="hidden flex items-center md:block">
-        { menu && menu.map((m) => (
-          <Link className="navbarMentu" key={m.id} to={m.link}>
-            {m.titile} icon={m.icon}
-          </Link>
-        ))}
-        <ThemeIcon />
+        <ul className="flex items-center">
+          { menu && menu.map((m) => (
+            <li key={m.id}>
+              <Link className="navbarMentu" to={m.link}>
+                {m.titile}
+              </Link>
+            </li>
+          ))}
+          <li> <ThemeIcon /> </li>
+        </ul>
       </div>
       {/* there will be animation delay and humberguer mennu maybe a bit animation  */}
 

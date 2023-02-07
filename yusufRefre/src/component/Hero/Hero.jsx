@@ -13,7 +13,7 @@ function Hero() {
       {/* navbar for mobile  */}
       <div className="flex justify-between  py-4 mb-4 md:hidden border-b-2 border-primary2">
         {/* logo for mobile */}
-        <h3 className="text-gray-900 font-medium font-title text-xl mx-2"> Yousuf refrigeration</h3>
+        <h3 className="text-gray-900 dark:text-Title_Dark font-medium font-title text-xl mx-2"> Yousuf refrigeration</h3>
         {/* navbar design for mobile */}
         <NavBar />
       </div>
@@ -25,7 +25,7 @@ function Hero() {
         {/* navbar menu for pc  */}
         <div className="md:flex  md:justify-between hidden md:block border-b-2 border-primary2 py-6 mb-6">
 
-          <h3 className="text-gray-900  font-medium font-title text-xl"> Yousuf refrigeration</h3>
+          <h3 className="text-gray-900 dark:text-Title_Dark font-medium font-title text-xl"> Yousuf refrigeration</h3>
 
           <NavBar />
         </div>
@@ -35,8 +35,8 @@ function Hero() {
           <div className="w-full md:w-3/5">
             {/* titile */}
             <div className="flex justify-center md:justify-start">
-              <h1 className="MainTitle bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-violet-700">35 years of <br />
-                <span className="MainTitle  text-Title_light">
+              <h1 className="MainTitle bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-violet-700 dark:text-Title_Dark">35 years of <br />
+                <span className="MainTitle  text-Title_light dark:text-primary2">
                   experience
                 </span>
               </h1>
@@ -47,7 +47,7 @@ function Hero() {
 
             </div>
             {/* details */}
-            <p className="consText text-Title_light">{heroSection.details}</p>
+            <p className="consText text-Title_light dark:text-Title_Dark">{heroSection.details}</p>
             <div className="flex justify-around md:flex-none md:justify-start">
               <button className="btn " type="button">Contract Us</button>
               <button className="btn md:mx-4" type="button">learn More </button>
