@@ -11,10 +11,10 @@
       };
  
     .paragraph{
-        @apply text-justify text-xl break-all leading-7  py-2 m-2   antialiased;
+        @apply text-justify text-xl break-all leading-7  py-2 mx-2   antialiased;
     };
     .consText{
-        @apply font-title uppercase  text-2xl text-4xl py-8 ;
+        @apply font-title uppercase mx-2 text-2xl text-4xl py-8 ;
     };
     .section_L{
         @apply min-w-full min-h-screen 

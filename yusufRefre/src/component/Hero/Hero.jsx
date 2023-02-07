@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import { heroSection, promotion } from '../../constants/info';
 import rat from '../../assets/repireguy.png';
+import { Avatar } from '../../constants/Avatar';
 
 function Hero() {
   return (
@@ -38,7 +39,7 @@ function Hero() {
                   experience
                 </span>
               </h1>
-              <div className="py-16"> <img src={rat} className="h-[256px]" alt="" /></div>
+              <Avatar className="hidden md:block" imgLink={rat} styleIMG="h-[256px] hidden md:block" styleDiv="py-16" />
 
             </div>
             {/* details */}
@@ -56,11 +57,13 @@ function Hero() {
           </div>
         </div>
         <div className="w-full">
-          <div className="flex justify-around md:px-16">
+          <div className="flex flex-col  justify-center md:px-16">
 
             { promotion && promotion.map((p) => (
-              <h3 className="consText text-Title_light" key={p.id}>
-                <span> <img className="h-[77px] mx-auto" src={p.icon} /> </span>
+              <h3 className="consText text-center py-4 text-Title_light" key={p.id}>
+                <span>
+                  <Avatar imgLink={p.icon} styleIMG="h-[55px] mx-auto" />
+                </span>
                 {p.titile}
               </h3>
             ))}
