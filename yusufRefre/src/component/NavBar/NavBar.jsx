@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { menu } from '../../constants/info';
+import ThemeIcon from '../../constants/darkmodUI';
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +10,11 @@ function NavBar() {
     <nav className="z-10">
       <div className="hidden flex items-center md:block">
         { menu && menu.map((m) => (
-          <Link className="navbarMentu" key={m.id} to={m.link}>{m.titile}</Link>
+          <Link className="navbarMentu" key={m.id} to={m.link}>
+            {m.titile} icon={m.icon}
+          </Link>
         ))}
+        <ThemeIcon />
       </div>
       {/* there will be animation delay and humberguer mennu maybe a bit animation  */}
 

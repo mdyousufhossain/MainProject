@@ -1,6 +1,7 @@
 import sat from '../assets/satisfaction.svg';
 import time from '../assets/time.svg';
 import top from '../assets/top.svg';
+import ThemeIcon from './darkmodUI';
 
 export const menu = [
   {
@@ -25,6 +26,12 @@ export const menu = [
     id: 4,
     titile: 'Contract',
     icon: null,
+    link: 'contract',
+  },
+  {
+    id: 5,
+    titile: null,
+    icon: <ThemeIcon />,
     link: 'contract',
   },
 ];

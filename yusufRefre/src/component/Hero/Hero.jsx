@@ -1,14 +1,15 @@
 import React, { Suspense } from 'react';
 import NavBar from '../NavBar/NavBar';
 import { heroSection } from '../../constants/info';
+import { ServicesMini } from '../Services/Services';
 
 const ServicesGuy = React.lazy(() => import('./serviceGuy'));
 
 function Hero() {
   return (
-    <div className="section_L bg-primary">
+    <div className="section_L bg-primary dark:bg-secondary">
       {/* loding animation div */}
-      <div className="bg-red-600" />
+      {/* <div className="bg-red-600" /> */}
       {/* navbar for mobile  */}
       <div className="flex justify-between  py-4 mb-4 md:hidden border-b-2 border-primary2">
         {/* logo for mobile */}
@@ -24,12 +25,12 @@ function Hero() {
         {/* navbar menu for pc  */}
         <div className="md:flex  md:justify-between hidden md:block border-b-2 border-primary2 py-6 mb-6">
 
-          <h3 className="text-gray-900 font-medium font-title text-xl"> Yousuf refrigeration</h3>
+          <h3 className="text-gray-900  font-medium font-title text-xl"> Yousuf refrigeration</h3>
 
           <NavBar />
         </div>
         {/* hero section starting here  */}
-        <div className="md:flex md:justify-between py-4 md:py-16">
+        <div className="md:flex md:justify-between py-4 md:py-8">
           {/* title and details text area and button  */}
           <div className="w-full md:w-3/5">
             {/* titile */}
@@ -53,12 +54,13 @@ function Hero() {
             </div>
             {/* image cersalll from glider and motion js */}
           </div>
-          <div className=" md:w-4/12 bg-slate-300">
+          <div className="hidden md:block md:w-4/12 bg-slate-300">
             <h1>left </h1>
             {/* // this is left
             // there will be gradient according to picture */}
           </div>
         </div>
+        <ServicesMini />
       </div>
     </div>
   );
