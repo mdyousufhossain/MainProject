@@ -7,14 +7,14 @@
 
 @layer components{
     .MainTitle{
-        @apply text-7xl tracking-wide leading-[70px] md:leading-[120px] md:text-9xl mx-2 md:text-left  font-title font-bold py-4 md:py-16 ;
+        @apply text-7xl tracking-wide text-center leading-[70px] md:leading-[120px] md:text-9xl  md:text-left  font-title font-bold py-4 md:py-16 ;
       };
  
     .paragraph{
         @apply text-justify text-xl break-all leading-7  py-2 mx-2   antialiased;
     };
     .consText{
-        @apply font-title uppercase mx-2 text-2xl text-4xl py-8 ;
+        @apply font-title text-center  uppercase  text-2xl text-4xl py-8 md:text-left;
     };
     .section_L{
         @apply min-w-full min-h-screen 

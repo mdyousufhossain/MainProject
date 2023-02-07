@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import NavBar from '../NavBar/NavBar';
-import { heroSection, promotion } from '../../constants/info';
-import rat from '../../assets/repireguy.png';
-import { Avatar } from '../../constants/Avatar';
+import { heroSection } from '../../constants/info';
+
+const ServicesGuy = React.lazy(() => import('./serviceGuy'));
 
 function Hero() {
   return (
@@ -33,41 +33,30 @@ function Hero() {
           {/* title and details text area and button  */}
           <div className="w-full md:w-3/5">
             {/* titile */}
-            <div className="flex">
+            <div className="flex justify-center md:justify-start">
               <h1 className="MainTitle bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-violet-700">35 years of <br />
-                <span className="MainTitle mx-0 text-Title_light">
+                <span className="MainTitle  text-Title_light">
                   experience
                 </span>
               </h1>
-              <Avatar className="hidden md:block" imgLink={rat} styleIMG="h-[256px] hidden md:block" styleDiv="py-16" />
+
+              <Suspense fallback={<div> Please Wait... </div>}>
+                <ServicesGuy />
+              </Suspense>
 
             </div>
             {/* details */}
             <p className="consText text-Title_light">{heroSection.details}</p>
-
-            <button className="btn" type="button">Contract Us</button>
-            <button className="btn md:mx-4" type="button">learn More </button>
-
+            <div className="flex justify-around md:flex-none md:justify-start">
+              <button className="btn " type="button">Contract Us</button>
+              <button className="btn md:mx-4" type="button">learn More </button>
+            </div>
             {/* image cersalll from glider and motion js */}
           </div>
           <div className=" md:w-4/12 bg-slate-300">
             <h1>left </h1>
             {/* // this is left
             // there will be gradient according to picture */}
-          </div>
-        </div>
-        <div className="w-full">
-          <div className="flex flex-col  justify-center md:px-16">
-
-            { promotion && promotion.map((p) => (
-              <h3 className="consText text-center py-4 text-Title_light" key={p.id}>
-                <span>
-                  <Avatar imgLink={p.icon} styleIMG="h-[55px] mx-auto" />
-                </span>
-                {p.titile}
-              </h3>
-            ))}
-
           </div>
         </div>
       </div>
