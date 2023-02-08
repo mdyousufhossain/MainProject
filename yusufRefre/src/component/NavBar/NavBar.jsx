@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { menu } from '../../constants/info';
 import ThemeIcon from '../../constants/darkmodUI';
+
+const items = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 300, damping: 24 },
+  },
+  closed: { opacity: 0, y: 20, transition: { duration: 0.5 } },
+};
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +22,7 @@ function NavBar() {
         <ul className="flex items-center">
           { menu && menu.map((m) => (
             <li key={m.id}>
-              <Link className="navbarMentu" to={m.link}>
+              <Link className="navbarMentu dark:text-Title_Dark" to={m.link}>
                 {m.titile}
               </Link>
             </li>
@@ -22,22 +32,54 @@ function NavBar() {
       </div>
       {/* there will be animation delay and humberguer mennu maybe a bit animation  */}
 
-      <div className="text-right md:hidden">
-        <button
+      <motion.div
+        className="text-right md:hidden"
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+      >
+        <motion.button
           type="button"
           className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-slate-500 mx-2"
           onClick={() => setIsOpen(!isOpen)}
+          whileTap={{ scale: 0.97 }}
         >
-          <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-        </button>
+          <motion.div
+            variants={{
+              open: { rotate: 180 },
+              closed: { rotate: 0 },
+            }}
+            transition={{ duration: 0.2 }}
+            style={{ originY: 0.55 }}
+          >
+            <svg width="15" height="15" viewBox="0 0 20 20">
+              <path d="M0 7 L 20 7 L 10 16" />
+            </svg>
+          </motion.div>
+        </motion.button>
         {isOpen && (
-          <ul>
+          <motion.ul
+            variants={{
+              open: { opacity: 1 },
+              closed: { opacity: 0 },
+            }}
+            transition={{ duration: 0.3 }}
+
+          >
             { menu && menu.map((m) => (
-              <li><Link className="navbarMentu" key={m.id} to={m.link}>{m.titile}</Link></li>
+              <motion.li
+                className="navbarMentu"
+                key={m.id}
+                to={m.link}
+                variants={items}
+              ><Link>
+                {m.titile}
+              </Link>
+              </motion.li>
             ))}
-          </ul>
+            <li><ThemeIcon /></li>
+          </motion.ul>
         )}
-      </div>
+      </motion.div>
     </nav>
   );
 }

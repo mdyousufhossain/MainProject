@@ -4,6 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar{
+    width:5px;
+    background: rgb(36, 36, 36);
+    scroll-behavior: smooth;
+    
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #47B5FF;
+    
+    
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(202, 202, 202);
+  }
+
+
+
 
 @layer components{
     .MainTitle{

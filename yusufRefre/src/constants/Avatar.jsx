@@ -13,8 +13,8 @@ export function Top({ style }) {
 
     <svg
       className={style}
-      height="95px"
-      width="95px"
+      height="90px"
+      width="90px"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
@@ -70,7 +70,7 @@ export function Top({ style }) {
 export function Time({ style }) {
   return (
 
-    <svg className={style} width="70pt" height="70pt" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+    <svg className={style} width="75pt" height="75pt" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
 
       <g>
         <path d="m448.3 52.5h-70c-6.25 0-12.027-3.3359-15.156-8.75-3.125-5.4141-3.125-12.086 0-17.5 3.1289-5.4141 8.9062-8.75 15.156-8.75h70c6.2539 0 12.031 3.3359 15.156 8.75s3.125 12.086 0 17.5-8.9023 8.75-15.156 8.75z" />
@@ -92,8 +92,8 @@ export function Satisfaction({ style }) {
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="70pt"
-      height="70pt"
+      width="60pt"
+      height="60pt"
       viewBox="0 0 512.000000 512.000000"
       className={style}
     >

@@ -28,17 +28,17 @@ export function ServicesMini() {
       <div className="mx-2">
         <h3 className="consText text-center py-2 text-black-900 dark:text-Title_Dark">
           <span>
-            <Top style="fill-secondary dark:fill-primary mx-auto" />
+            <Top style="fill-secondary dark:fill-primary mx-auto mb-2" />
           </span>
           Top Quality
         </h3>
       </div>
-      <div className="mx-2 flex flex-col items-center  justify-center">
+      <div className="mx-2 flex flex-col items-center  justify-center ">
         <h3 className="consText text-center py-2 text-black-900 dark:text-Title_Dark">
           <span>
-            <Satisfaction style="fill-secondary dark:fill-primary mx-auto" />
+            <Satisfaction style="fill-secondary dark:fill-primary mx-auto py-1 my-3" />
           </span>
-          100% Satisfaction Guerantee 
+         Satisfaction Guerantee
         </h3>
       </div>
 
