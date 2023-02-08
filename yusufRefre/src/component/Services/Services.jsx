@@ -22,7 +22,7 @@ export function ServicesMini() {
           <span>
             <Time style="fill-secondary dark:fill-primary mx-auto" />
           </span>
-          Top Quality
+          Long term Service
         </h3>
       </div>
       <div className="mx-2">
@@ -38,7 +38,7 @@ export function ServicesMini() {
           <span>
             <Satisfaction style="fill-secondary dark:fill-primary mx-auto" />
           </span>
-          Top Quality
+          100% Satisfaction Guerantee 
         </h3>
       </div>
 
