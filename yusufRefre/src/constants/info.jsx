@@ -47,7 +47,7 @@ export const productPrompt = [
 
 export const heroSection = {
   titile: '35 years of experience',
-  details: 'For dacads Yousuf refrigeration have been trusted choices for reliability and safety in Air-conditioning, heating parts and service\'s. ',
+  details: 'For dacads Yousuf refrigeration have been a trusted choice for reliability and safety in Air-conditioning, heating parts and service. ',
 };
 
 export const promotion = [

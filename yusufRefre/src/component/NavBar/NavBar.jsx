@@ -39,7 +39,7 @@ function NavBar() {
       >
         <motion.button
           type="button"
-          className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-slate-500 mx-2"
+          className="flex items-center px-3 py-2 border rounded text-teal-200 border-secondary  dark:border-primary hover:text-white hover:border-slate-500 mx-2"
           onClick={() => setIsOpen(!isOpen)}
           whileTap={{ scale: 0.97 }}
         >

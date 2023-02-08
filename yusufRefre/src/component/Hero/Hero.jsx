@@ -1,16 +1,24 @@
 import React, { Suspense } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import NavBar from '../NavBar/NavBar';
 import { heroSection } from '../../constants/info';
 import { ServicesMini } from '../Services/Services';
+import Form from './Form';
 
 const ServicesGuy = React.lazy(() => import('./serviceGuy'));
 
 function Hero() {
+  const { scrollYProgress } = useScroll();
   return (
+
     <div className="section_L bg-primary dark:bg-secondary">
       {/* loding animation div */}
-      {/* <div className="bg-red-600" /> */}
+      <motion.div
+        className="bg-secondary2 dark:bg-primary2 h-1 fixed top-0
+        left-0
+        right-0 z-20 origin-top-left"
+        style={{ scaleX: scrollYProgress }}
+      />
       {/* navbar for mobile  */}
       <div className="flex justify-between  py-4 mb-4 md:hidden border-b-2 border-primary2 dark:border-secondary2">
         {/* logo for mobile */}
@@ -59,15 +67,13 @@ function Hero() {
             {/* details */}
             <p className="consText text-Title_light dark:text-Title_Dark">{heroSection.details}</p>
             <div className="flex justify-around md:flex-none md:justify-start">
-              <button className="btn " type="button">Contract Us</button>
+              <button className="btn " type="button">Contact Us</button>
               <button className="btn md:mx-4" type="button">learn More </button>
             </div>
             {/* image cersalll from glider and motion js */}
           </div>
-          <div className="hidden md:block md:w-4/12 bg-slate-300">
-            <h1>left </h1>
-            {/* // this is left
-            // there will be gradient according to picture */}
+          <div className="md:w-4/12">
+            <Form />
           </div>
         </div>
         <ServicesMini />

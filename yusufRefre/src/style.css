@@ -34,7 +34,7 @@
         @apply text-justify text-xl break-all leading-7  py-2 mx-2   antialiased;
     };
     .consText{
-        @apply font-title text-center  uppercase  text-2xl text-4xl py-8 md:text-left;
+        @apply font-title text-center  uppercase   text-4xl py-8 md:text-left;
     };
     .section_L{
         @apply min-w-full min-h-screen 
