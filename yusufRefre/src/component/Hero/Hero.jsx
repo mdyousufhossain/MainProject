@@ -3,7 +3,8 @@ import { motion, useScroll } from 'framer-motion';
 import NavBar from '../NavBar/NavBar';
 import { heroSection } from '../../constants/info';
 import { ServicesMini } from '../Services/Services';
-import Form from './Form';
+
+const Form = React.lazy(() => import('./Form'));
 
 const ServicesGuy = React.lazy(() => import('./serviceGuy'));
 
@@ -55,12 +56,9 @@ function Hero() {
               </motion.h1>
 
               <Suspense fallback={<div> Please Wait... </div>}>
-                <motion.div
-                  animate={{ y: -20 }}
-                  transition={{ ease: 'easeOut', duration: 1 }}
-                >
+                <div>
                   <ServicesGuy />
-                </motion.div>
+                </div>
               </Suspense>
 
             </div>
@@ -73,7 +71,9 @@ function Hero() {
             {/* image cersalll from glider and motion js */}
           </div>
           <div className="md:w-4/12">
-            <Form />
+            <Suspense fallback={<div> Please Wait... </div>}>
+              <Form />
+            </Suspense>
           </div>
         </div>
         <ServicesMini />

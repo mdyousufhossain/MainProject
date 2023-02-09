@@ -1,5 +1,5 @@
 import React from 'react';
-import { Top, Time, Satisfaction } from '../../constants/Avatar';
+import { Top, Time, Satisfaction } from '../../helper/Avatar';
 
 export function ServicesMini() {
   return (
