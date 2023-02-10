@@ -1,4 +1,3 @@
-import { Top, Time, Satisfaction } from './Avatar';
 
 export const menu = [
   {
@@ -54,18 +53,18 @@ export const promotion = [
   {
     id: 1,
     titile: '100% Satisfaction',
-    icon: <Satisfaction />,
+
   },
 
   {
     id: 2,
     titile: 'Long Tearm Services',
-    icon: <Time />,
+
   },
   {
     id: 3,
     titile: 'Top quality',
-    icon: <Top />,
+
   },
 ];
 

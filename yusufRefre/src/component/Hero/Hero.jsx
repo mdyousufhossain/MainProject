@@ -34,7 +34,7 @@ function Hero() {
 
         {/* navbar menu for pc  */}
         <div className="md:flex  md:justify-between hidden md:block border-b-2 border-primary2 py-6 mb-6 dark:border-secondary2">
-
+          {/* logo */}
           <h3 className="text-gray-900 dark:text-Title_Dark font-medium font-title text-xl"> Yousuf refrigeration</h3>
 
           <NavBar />
@@ -54,7 +54,7 @@ function Hero() {
                   experience
                 </span>
               </motion.h1>
-
+              {/* using it for performance issue  */}
               <Suspense fallback={<div> Please Wait... </div>}>
                 <div>
                   <ServicesGuy />
@@ -71,6 +71,7 @@ function Hero() {
             {/* image cersalll from glider and motion js */}
           </div>
           <div className="md:w-4/12">
+            {/* form need more funcionality and more improvment */}
             <Suspense fallback={<div> Please Wait... </div>}>
               <Form />
             </Suspense>
