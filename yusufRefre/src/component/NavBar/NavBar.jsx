@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { menu } from '../../constants/info';
 import ThemeIcon from '../../constants/darkmodUI';
+// animation from framer js
 
+// animation need more edite edite and animate the way you want 
 const items = {
   open: {
     opacity: 1,
