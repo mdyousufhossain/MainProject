@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '../../constants/Avatar';
+import { Avatar } from '../../Helper/Avatar';
 import rat from '../../assets/repireguy.webp';
 
 function ServicesGuy() {

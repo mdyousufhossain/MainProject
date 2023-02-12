@@ -3,22 +3,17 @@ import React from 'react';
 function Form() {
   return (
     <div>
-      
+
       <form className="p-6 my-4 rounded-lg bg-primary dark:bg-secondary border-2 border-primary2 dark:border-secondary2">
         <label htmlFor="text">
-        <h3 className="consText py-4 text-Title-light text-center  dark:text-Title_Dark">Get in touch</h3>
+          <h3 className="consText py-4 text-Title-light text-center  dark:text-Title_Dark">Get in touch</h3>
         </label>
         <div className="mb-4">
           <label className="block font-bold mb-2 text-Para_Light dark:text-Para_Dark" htmlFor="name">
             Name
           </label>
           <input
-            className="border rounded-md
-           text-Para_Light dark:text-Para_Dark
-           p-2 w-full font-para
-           bg-primary dark:bg-secondary
-           border-2 border-primary2 dark:border-secondary2
-           "
+            className="inputField"
             id="name"
             type="text"
             placeholder="Enter your name"
@@ -29,12 +24,7 @@ function Form() {
             Email
           </label>
           <input
-            className="border rounded-md
-             text-Para_Light dark:text-Para_Dark
-             p-2 w-full
-             bg-primary dark:bg-secondary
-             border-2 border-primary2 dark:border-secondary2
-             "
+            className="inputField"
             id="email"
             type="email"
             placeholder="Enter your email"
@@ -45,13 +35,7 @@ function Form() {
             Message
           </label>
           <textarea
-            className="border rounded-md
-            text-Para_Light
-            dark:text-Para_Dark
-            p-2 w-full
-            bg-primary dark:bg-secondary
-            border-2 border-primary2 dark:border-secondary2
-            "
+            className="inputField"
             id="message"
             rows="5"
             placeholder="Enter your message"
@@ -61,8 +45,8 @@ function Form() {
           Submit
         </button>
         <label className="block font-bold mb-2 text-Para_Light dark:text-Para_Dark" htmlFor="Text">
-            Call : 01XXXXXX
-          </label>
+          Call : 01XXXXXX
+        </label>
       </form>
     </div>
   );
