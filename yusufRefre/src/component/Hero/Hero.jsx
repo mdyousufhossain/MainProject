@@ -3,19 +3,27 @@ import React, { Suspense } from 'react';
 import NavBar from '../NavBar/NavBar';
 import { heroSection } from '../../Helper/Info';
 import { ServicesMini } from '../Services/ServiceMini';
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const Form = React.lazy(() => import('./Form'));
 
 const ServicesGuy = React.lazy(() => import('./serviceGuy'));
 
 function Hero() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   return (
 
     <div className="section_L bg-primary dark:bg-secondary">
       {/* loding animation div */}
-      <div
-        className="bg-secondary dark:bg-primary2 h-1 "
-
+      <motion.div
+        className="bg-secondary dark:bg-primary2 h-1  fixed
+        top-0 left-0 right-0  origin-top-left"
+        style={{ scaleX }}
       />
       {/* navbar for mobile  */}
       <div className="flex justify-between  py-4 mb-4 md:hidden border-b-2 border-primary2 dark:border-secondary2">

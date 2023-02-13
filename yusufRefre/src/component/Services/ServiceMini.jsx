@@ -1,9 +1,7 @@
 import React from 'react';
 import { Top, Time, Satisfaction } from '../../Helper/Avatar';
 
-
 export function ServicesMini() {
-  
   return (
     <div className="flex flex-col  md:flex md:flex-row justify-center md:justify-around md:px-16">
       <div className="mx-2">
