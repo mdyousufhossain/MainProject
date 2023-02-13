@@ -22,7 +22,7 @@ function Hero() {
       {/* loding animation div */}
       <motion.div
         className="bg-secondary dark:bg-primary2 h-1  fixed
-        top-0 left-0 right-0  origin-top-left"
+        top-0 left-0 right-0  origin-top-left z-10"
         style={{ scaleX }}
       />
       {/* navbar for mobile  */}

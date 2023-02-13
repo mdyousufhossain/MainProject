@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useInView } from 'framer-motion';
 
-function AnimatedServiceHeader() {
+function AnimatedServiceHeader({ message }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const someStyle = {
@@ -21,7 +21,7 @@ function AnimatedServiceHeader() {
           transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
         }}
       >
-        Why Choose us ?
+        {message}
       </h1>
     </div>
   );
