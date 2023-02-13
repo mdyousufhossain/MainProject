@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 
+import { motion, useScroll, useSpring } from 'framer-motion';
 import NavBar from '../NavBar/NavBar';
 import { heroSection } from '../../Helper/Info';
 import { ServicesMini } from '../Services/ServiceMini';
-import { motion, useScroll, useSpring } from "framer-motion";
 
 const Form = React.lazy(() => import('./Form'));
 
