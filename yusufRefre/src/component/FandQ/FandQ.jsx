@@ -4,8 +4,8 @@ import React from 'react';
 goal : there will be some some quetion and answer on click.
 effect: onhover there will some glance effect
 method : we will use a function so user cant spam the click
-
-you need a reuseable component that will take two input qsn and answer
+dfsdfsf
+you need a reuseable component thatf will take two input qsn and answer
 */
 
 function QustionAndAnswer() {
