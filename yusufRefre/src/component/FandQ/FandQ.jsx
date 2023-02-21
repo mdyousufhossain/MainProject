@@ -1,9 +1,17 @@
 import React from 'react';
 
-const FandQ = () => {
-  const thisis = console.log('heye there')(
-    <div>FandQ</div>,
-  );
-};
+/*
+goal : there will be some some quetion and answer on click.
+effect: onhover there will some glance effect
+method : we will use a function so user cant spam the click
 
-export default FandQ;
+you need a reuseable component that will take two input qsn and answer
+*/
+
+function QustionAndAnswer() {
+  return (
+    <h1> is thaa working </h1>
+  );
+}
+
+export default QustionAndAnswer;

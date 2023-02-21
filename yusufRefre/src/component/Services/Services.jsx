@@ -6,11 +6,11 @@ function Service() {
     <section className="section_L bg-primary dark:bg-secondary">
       <AnimatedServiceHeader message="why choose us" />
       <div className="flex">
-
+        {/* // this one for the picture */}
         <div className="w-full h-screen bg-red-600 sticky top-0">
           <div className="w-full h-screen bg-red-900">
             <h1 className="text-center MainTitle  text-Title_light dark:text-primary2">
-              First thing first <br /> Fuck your for choosing us
+              Get the best Service<br /> Thank you  for choosing us
             </h1>
           </div>
 

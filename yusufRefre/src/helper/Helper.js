@@ -1,7 +1,7 @@
 // debounce function
 export function debounce(func, delay) {
   let timeout;
-  return function () {
+  return function() {
     const context = this;
     const args = arguments;
     clearTimeout(timeout);
@@ -31,7 +31,7 @@ export function throttle(func, delay) {
 export function once(func) {
   let ran = false;
   let result;
-  return function () {
+  return function() {
     if (ran) return result;
     result = func.apply(this, arguments);
     ran = true;
